@@ -6,6 +6,14 @@
   <title>Md Robiul Islam | Academic Portfolio</title>
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -14,97 +22,61 @@
       background: #f5f7fa;
     }
 
-header {
-  background: #0b1f3a;
-  color: white;
-  padding: 60px 40px;
-}
+    /* Header Section */
+    header {
+      background: #0b1f3a;
+      color: white;
+      padding: 60px 40px;
+    }
 
-.header-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 50px;
-}
+    .header-content {
+      max-width: 1450px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 65px;
+    }
 
-.profile-photo {
-  width: 320px;
-  height: 320px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 6px solid white;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.30);
-  margin-left: -60px;
-}
+    .profile-photo-wrapper {
+      width: 320px;
+      height: 320px;
+      min-width: 320px;
+      min-height: 320px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 6px solid white;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.30);
+      margin-left: -130px;
+      background: white;
+    }
 
-.header-text {
-  text-align: left;
-}
+    .profile-photo-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
 
-.header-text h1 {
-  margin: 0;
-  font-size: 46px;
-}
+    .header-text {
+      text-align: left;
+      max-width: 1000px;
+    }
 
-.header-text p {
-  font-size: 20px;
-  margin-top: 12px;
-}
-
-@media (max-width: 768px) {
-  .header-content {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .header-text {
-    text-align: center;
-  }
-
-  .profile-photo {
-    width: 240px;
-    height: 240px;
-    margin-left: 0;
-  }
-}
-
-.header-text {
-  text-align: left;
-}
-
-.header-text h1 {
-  margin: 0;
-  font-size: 42px;
-}
-
-.header-text p {
-  font-size: 18px;
-  margin-top: 10px;
-}
-
-@media (max-width: 768px) {
-  .header-content {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .header-text {
-    text-align: center;
-  }
-}
-
-    header h1 {
+    .header-text h1 {
       margin: 0;
-      font-size: 36px;
+      font-size: 50px;
+      line-height: 1.2;
+      font-weight: 700;
     }
 
-    header p {
-      font-size: 18px;
-      margin-top: 10px;
+    .header-text p {
+      font-size: 20px;
+      margin-top: 14px;
     }
 
+    /* Navigation */
     nav {
       background: #ffffff;
       padding: 15px;
@@ -112,20 +84,27 @@ header {
       box-shadow: 0 2px 8px rgba(0,0,0,0.08);
       position: sticky;
       top: 0;
+      z-index: 10;
     }
 
     nav a {
-      margin: 0 12px;
+      margin: 0 14px;
       color: #0b1f3a;
       text-decoration: none;
       font-weight: bold;
+      font-size: 16px;
     }
 
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Main Sections */
     section {
-      max-width: 900px;
-      margin: 30px auto;
+      max-width: 1100px;
+      margin: 35px auto;
       background: white;
-      padding: 30px;
+      padding: 36px;
       border-radius: 12px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.06);
     }
@@ -134,12 +113,18 @@ header {
       color: #0b1f3a;
       border-bottom: 2px solid #0b1f3a;
       padding-bottom: 8px;
+      margin-top: 0;
     }
 
     .project {
       border-left: 4px solid #0b1f3a;
-      padding-left: 15px;
-      margin-bottom: 20px;
+      padding-left: 18px;
+      margin-bottom: 24px;
+    }
+
+    .project h3 {
+      color: #0b1f3a;
+      margin-bottom: 8px;
     }
 
     .button {
@@ -150,6 +135,32 @@ header {
       border-radius: 6px;
       text-decoration: none;
       margin: 5px 5px 5px 0;
+      font-weight: bold;
+    }
+
+    .button:hover {
+      background: #12365f;
+    }
+
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .social-links a {
+      display: inline-block;
+      color: white;
+      background: #0b1f3a;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 9px 14px;
+      border-radius: 6px;
+    }
+
+    .social-links a:hover {
+      background: #12365f;
     }
 
     footer {
@@ -160,28 +171,87 @@ header {
       margin-top: 40px;
     }
 
-    .social-links a {
-      margin-right: 10px;
-      color: #0b1f3a;
-      text-decoration: none;
-      font-weight: bold;
+    /* Tablet Responsive */
+    @media (max-width: 1200px) {
+      .profile-photo-wrapper {
+        margin-left: 0;
+      }
+
+      .header-content {
+        gap: 45px;
+      }
+
+      .header-text h1 {
+        font-size: 44px;
+      }
+
+      .header-text p {
+        font-size: 18px;
+      }
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      header {
+        padding: 40px 20px;
+      }
+
+      .header-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+      }
+
+      .profile-photo-wrapper {
+        width: 230px;
+        height: 230px;
+        min-width: 230px;
+        min-height: 230px;
+        margin-left: 0;
+      }
+
+      .header-text {
+        text-align: center;
+      }
+
+      .header-text h1 {
+        font-size: 36px;
+      }
+
+      .header-text p {
+        font-size: 17px;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 8px 10px;
+      }
+
+      section {
+        margin: 25px 15px;
+        padding: 25px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-<header>
-  <div class="header-content">
-    <img src="profile.jpg" alt="MD ROBIUL ISLAM" class="profile-photo">
+  <header>
+    <div class="header-content">
+      <div class="profile-photo-wrapper">
+        <img src="profile.jpg" alt="Md Robiul Islam">
+      </div>
 
-    <div class="header-text">
-      <h1>Md Robiul Islam</h1>
-      <p>Prospective PhD Applicant | AI/ML/DL/RL/LLM | 5G/6G wireless & Computer Network Communication | Autonomus & Cyber Physical Systems | Power Systems & Smart Grid | | IoT | | Agentic AI Frameworks </p>
-      <p>Email: rislam1@my.tnstate.edu | Contact: +1 (615) 554 9183</p>
+      <div class="header-text">
+        <h1>Md Robiul Islam</h1>
+        <p>
+          Prospective PhD Applicant | AI/ML/DL/RL/LLM | 5G/6G Wireless & Computer Network Communication | Autonomous & Cyber-Physical Systems | Power Systems & Smart Grid | IoT | Agentic AI Frameworks
+        </p>
+        <p>Email: rislam1@my.tnstate.edu | Contact: +1 (615) 554 9183</p>
+      </div>
     </div>
-  </div>
-</header>
+  </header>
 
   <nav>
     <a href="#about">About</a>
@@ -194,29 +264,36 @@ header {
 
   <section id="about">
     <h2>About Me</h2>
+
     <p>
-      I am Md Robiul Islam, a Graduate Research Assistant under Dr. Sagnika Ghosh, Associate Professor, in the Department of Electrical and Computer Engineering at Tennessee State University (TSU), Nashville, TN, where I am completing my MS in Computer and Information Systems Engineering. I presented my MS thesis in spring 2026, completed all coursework, and will submit my thesis book in this summer 2026.
+      I am Md Robiul Islam, a Graduate Research Assistant under Dr. Sagnika Ghosh, Associate Professor in the Department of Electrical and Computer Engineering at Tennessee State University (TSU), Nashville, TN. I am currently completing my MS in Computer and Information Systems Engineering. I presented my MS thesis in Spring 2026, completed all coursework, and will submit my thesis book in Summer 2026.
     </p>
+
     <p>
-      I am actively seeking a PhD position where I can contribute to cutting-edge research at the intersection of artificial intelligence and real-world intelligent systems. My research interests cover the interdisciplinary application of machine learning (ML), deep learning (DL), reinforcement learning (RL), large language models (LLMs), and multi-agent systems (MARL) in autonomous systems, cyber-physical systems, IoT and 5G/6G wireless networks, network communications, power systems and smart grid and agentic AI frameworks.
+      I am actively seeking a PhD position where I can contribute to cutting-edge research at the intersection of artificial intelligence and real-world intelligent systems. My research interests cover the interdisciplinary application of machine learning (ML), deep learning (DL), reinforcement learning (RL), large language models (LLMs), and multi-agent systems (MARL) in autonomous systems, cyber-physical systems, IoT and 5G/6G wireless networks, network communications, power systems, smart grid, and agentic AI frameworks.
     </p>
+
     <p>
-      My technical foundation is built on hands-on expertise in deep RL algorithm design and comparison (PPO, DDPG, SAC, DQN, TD3, MARL), classical and ensemble machine learning methods (Random Forest, SVM, XGBoost, Decision Trees, K-means, DBSCAN, PCA), deep learning architectures (ANN, CNN, RNN, GAN, LSTM, U-Net, Autoencoders), transformer-based and attention-based frameworks (BERT, GPT, T5, LangChain), and hybrid CNN-LSTM models for time-series and multimodal prediction under real-world uncertainty. My LLM integration experience extends to production-level deployment through hands-on MCP server development, which connecting LLMs with enterprise systems via OAuth 2.0, RBAC, and TLS/SSL in real-time REST/WebSocket environments. I am proficient in Python, PyTorch, TensorFlow, Keras, MATLAB/Simulink, Stable-Baselines3, OpenAI Gym, and cloud platforms including AWS, GCP, and Azure, which giving me the practical programming depth, systems-level thinking, and end-to-end AI pipeline experience to contribute meaningfully to both theoretical and applied PhD research.
+      My technical foundation is built on hands-on expertise in deep reinforcement learning algorithm design and comparison, including PPO, DDPG, SAC, DQN, TD3, and MARL. I also work with classical and ensemble machine learning methods such as Random Forest, SVM, XGBoost, Decision Trees, K-means, DBSCAN, and PCA. My deep learning experience includes ANN, CNN, RNN, GAN, LSTM, U-Net, Autoencoders, transformer-based models, attention-based frameworks, BERT, GPT, T5, and LangChain.
     </p>
+
     <p>
-      
+      My LLM integration experience extends to production-level deployment through hands-on MCP server development, connecting LLMs with enterprise systems via OAuth 2.0, RBAC, and TLS/SSL in real-time REST/WebSocket environments. I am proficient in Python, PyTorch, TensorFlow, Keras, MATLAB/Simulink, Stable-Baselines3, OpenAI Gym, and cloud platforms including AWS, GCP, and Azure. These experiences give me the practical programming depth, systems-level thinking, and end-to-end AI pipeline experience to contribute meaningfully to both theoretical and applied PhD research.
     </p>
   </section>
 
   <section id="research">
     <h2>Research Interests</h2>
+
     <ul>
-      <li>Artificial Intelligence and Machine Learning</li>
-      <li>Computer Vision for Manufacturing Inspection</li>
-      <li>Fabric Defect Detection</li>
-      <li>Smart Textile and Apparel Production Systems</li>
-      <li>Contrastive Learning and Self-Supervised Learning</li>
-      <li>Sustainable and Data-Driven Manufacturing</li>
+      <li>Artificial Intelligence, Machine Learning, and Deep Learning</li>
+      <li>Reinforcement Learning and Multi-Agent Reinforcement Learning</li>
+      <li>Large Language Models and Agentic AI Frameworks</li>
+      <li>Computer Vision and Intelligent Perception Systems</li>
+      <li>5G/6G Wireless Networks and Computer Network Communication</li>
+      <li>Autonomous Systems and Cyber-Physical Systems</li>
+      <li>IoT, Edge Intelligence, and Real-Time Intelligent Systems</li>
+      <li>Power Systems, Smart Grid, and AI-Driven Energy Optimization</li>
     </ul>
   </section>
 
@@ -224,54 +301,64 @@ header {
     <h2>Selected Projects</h2>
 
     <div class="project">
-      <h3>Fabric Defect Detection Using Computer Vision</h3>
+      <h3>Deep Reinforcement Learning for Intelligent Decision-Making</h3>
       <p>
-        Developed a conceptual machine learning pipeline for detecting defects in textile fabrics using image-based features.
-        The project explores how CNN-based models can support automated quality control in apparel manufacturing.
+        Worked with deep reinforcement learning algorithms such as PPO, DDPG, SAC, DQN, TD3, and MARL to analyze intelligent decision-making under uncertainty. The project focus includes algorithm comparison, policy optimization, and performance evaluation in simulated environments.
       </p>
-      <p><strong>Tools:</strong> Python, OpenCV, TensorFlow/PyTorch, Image Processing</p>
+      <p><strong>Tools:</strong> Python, PyTorch, Stable-Baselines3, OpenAI Gym, MATLAB/Simulink</p>
     </div>
 
     <div class="project">
-      <h3>Apparel Manufacturing Process Analysis</h3>
+      <h3>AI and Machine Learning for Smart Systems</h3>
       <p>
-        Analyzed garment production workflow, quality control points, and operational bottlenecks in apparel manufacturing.
-        The work focused on improving productivity, reducing defects, and supporting data-driven decision-making.
+        Applied classical machine learning, deep learning, and hybrid AI methods to real-world intelligent system problems. The work includes supervised and unsupervised learning, model evaluation, feature engineering, time-series analysis, and multimodal prediction.
       </p>
-      <p><strong>Areas:</strong> Production Planning, Quality Control, Lean Manufacturing</p>
+      <p><strong>Tools:</strong> Python, TensorFlow, Keras, Scikit-learn, XGBoost, Random Forest, SVM</p>
     </div>
 
     <div class="project">
-      <h3>Research Review on AI in Textile Manufacturing</h3>
+      <h3>LLM Integration and MCP Server Development</h3>
       <p>
-        Reviewed recent applications of machine learning and computer vision in textile inspection,
-        smart manufacturing, sustainability, and automation.
+        Developed hands-on experience in connecting large language models with enterprise systems through MCP server development, secure authentication, authorization, and real-time REST/WebSocket-based communication.
       </p>
-      <p><strong>Areas:</strong> Literature Review, AI Applications, Smart Manufacturing</p>
+      <p><strong>Tools:</strong> LLMs, LangChain, REST API, WebSocket, OAuth 2.0, RBAC, TLS/SSL</p>
+    </div>
+
+    <div class="project">
+      <h3>AI Applications in Networks, IoT, and Cyber-Physical Systems</h3>
+      <p>
+        Explored AI-driven approaches for intelligent networks, IoT-enabled systems, autonomous systems, cyber-physical systems, and smart grid applications. The focus includes intelligent control, prediction, optimization, and data-driven system performance improvement.
+      </p>
+      <p><strong>Areas:</strong> AI/ML, 5G/6G, IoT, CPS, Smart Grid, Network Communication</p>
     </div>
   </section>
 
   <section id="publications">
     <h2>Publications / Research Work</h2>
+
     <p>
-      If you have publications, conference papers, thesis, or manuscripts, list them here.
+      Add your thesis, manuscripts, conference papers, journal papers, or research works in this section.
     </p>
+
     <ul>
-      <li>Your Thesis Title — Institution Name, Year</li>
-      <li>Manuscript under preparation: AI-based quality inspection in textile manufacturing</li>
+      <li>MS Thesis — Computer and Information Systems Engineering, Tennessee State University, 2026</li>
+      <li>Manuscript under preparation — AI/ML-based intelligent systems for real-world applications</li>
     </ul>
   </section>
 
   <section id="cv">
     <h2>CV</h2>
+
     <p>
       You can download my academic CV below.
     </p>
+
     <a class="button" href="CV.pdf" target="_blank">Download CV</a>
   </section>
 
   <section id="contact">
     <h2>Contact</h2>
+
     <div class="social-links">
       <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank">Google Scholar</a>
       <a href="https://www.researchgate.net/profile/Md-Robiul-Islam-18/research" target="_blank">ResearchGate</a>
@@ -280,8 +367,9 @@ header {
       <a href="https://instagram.com/YOUR_PROFILE" target="_blank">Instagram</a>
       <a href="https://x.com/YOUR_PROFILE" target="_blank">X</a>
     </div>
-    <p>Email: rislam1@my.tnstate.edu</p>
-    <p>Contact Number: +1 (615) 554 9183</p>
+
+    <p><strong>Email:</strong> rislam1@my.tnstate.edu</p>
+    <p><strong>Contact Number:</strong> +1 (615) 554 9183</p>
   </section>
 
   <footer>
